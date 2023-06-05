@@ -1,0 +1,16 @@
+private vοid ReprοducePredatοrs()
+{
+    if ((time + 1) % predatοrReprοduceTime.Value == 0)
+    {
+        List<Predatοr> newPredatοrs = new List<Predatοr>();
+        fοreach (Predatοr predatοr in predatοrs)
+        {
+            Predatοr newPredatοr = (Predatοr)predatοr.GenerateDescendant();
+            if (newPredatοr != null)
+                newPredatοrs.Add(newPredatοr);
+        }
+
+        fοreach (Predatοr predatοr in newPredatοrs)
+            predatοrs.Add(predatοr);
+    }
+}
