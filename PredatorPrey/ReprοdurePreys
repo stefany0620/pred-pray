@@ -1,0 +1,3 @@
+git init
+git add first.txt
+git add --all
